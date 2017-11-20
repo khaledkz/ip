@@ -72,8 +72,15 @@ app.set('view engine', 'handlebars');
   
   console.log(addresses);
 
+  var myip = require('quick-local-ip');
+  let newadd1=myip.getLocalIP4();
+  
+  //getting ip6 network address of local system
+  let newadd2=myip.getLocalIP6();
+
+
 app.get('/', function (req, res) {
-  res.render('index', { myIp: addresses });
+   res.render('index', { myIp: req.connection.remoteAddress });
 });
 
 

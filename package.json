@@ -22,6 +22,7 @@
     "express-handlebars": "^3.0.0",
     "nodemailer": "^4.4.0",
     "os": "^0.1.1",
+    "quick-local-ip": "^1.0.7",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
