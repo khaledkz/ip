@@ -37,21 +37,21 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-let ipAddress="My Ip:"+myIp;
- var mailOptions = {
-  from: 'wafa.1998.13.2018@gmail.com',
-  to: 'wafa.1998.13.2017@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text:ipAddress
-};
+// let ipAddress="My Ip:"+myIp;
+//  var mailOptions = {
+//   from: 'wafa.1998.13.2018@gmail.com',
+//   to: 'wafa.1998.13.2017@gmail.com',
+//   subject: 'Sending Email using Node.js',
+//   text:ipAddress
+// };
 
-transporter.sendMail(mailOptions, function (error, info) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
+// transporter.sendMail(mailOptions, function (error, info) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log('Email sent: ' + info.response);
+//   }
+// });
 
 
   }));
