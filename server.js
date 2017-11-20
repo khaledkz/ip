@@ -27,34 +27,9 @@ app.set('view engine', 'handlebars');
 //     myIp = response.ip;
 //     // console.log(myIp)
 
-// var nodemailer = require('nodemailer');
-
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'wafa.1998.13.2018@gmail.com',
-//     pass: 'wafa2015'
-//   }
-// });
-
-// let ipAddress="My Ip:"+myIp;
-//  var mailOptions = {
-//   from: 'wafa.1998.13.2018@gmail.com',
-//   to: 'wafa.1998.13.2017@gmail.com',
-//   subject: 'Sending Email using Node.js',
-//   text:ipAddress
-// };
-
-// transporter.sendMail(mailOptions, function (error, info) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log('Email sent: ' + info.response);
-//   }
-// });
 
 
-  // }));
+  
 
 
   var os = require('os');
@@ -81,6 +56,34 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
   var ipzz = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+  var nodemailer = require('nodemailer');
+  
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'wafa.1998.13.2018@gmail.com',
+      pass: 'wafa2015'
+    }
+  });
+  
+  let ipAddress="My Ip:"+ipzz;
+   var mailOptions = {
+    from: 'wafa.1998.13.2018@gmail.com',
+    to: 'wafa.1998.13.2017@gmail.com',
+    subject: 'Sending Email using Node.js',
+    text:ipAddress
+  };
+  
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+
+  
   res.render('index', { myIp: ipzz });
 });
 
