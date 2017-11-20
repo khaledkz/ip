@@ -1,0 +1,11 @@
+[
+    {
+        "title": "My first blog post",
+        "summary": "This is a summary of my first blog post",
+        "content": "This is the full content of my first blog post that I published to my own website"
+    }, {
+        "title": "My second blog post",
+        "summary": "This is a summary of my second blog post",
+        "content": "This is the full content of my second blog post that I published to my own website"
+    }
+]
