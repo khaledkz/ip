@@ -80,7 +80,8 @@ app.set('view engine', 'handlebars');
 
 
 app.get('/', function (req, res) {
-   res.render('index', { myIp: req.connection.remoteAddress });
+  var ipzz = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  res.render('index', { myIp: ipzz });
 });
 
 
