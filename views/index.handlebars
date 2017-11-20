@@ -32,7 +32,7 @@ h1 b{
  <!--Script get ip with JavaScript by David Porras-->
 <div class="container text-center">
 <div class="contenido">
-	<h1>MY IP</h1> 
+	<h1>لا تلعب بالنار تحرق اصبيعك-الرد قادم</h1> 
 <h1>
 	<b id="my-ip"></b>
 </h1>
@@ -41,21 +41,8 @@ h1 b{
 <!--Script get ip with JavaScript by David Porras-->
 
 <script type="text/javascript">
-(function(loading, success) {
-  var xhr = XMLHttpRequest !== undefined ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-                    loading.apply(null, []);
-                    xhr.open('get', 'https://api.ipify.org/?format=json', true);
-                    xhr.onreadystatechange = function() {
-                        if (xhr.readyState === 4) {
-                            success.call(null, JSON.parse(xhr.responseText));
-                        }
-                    }
-                    xhr.send();
-                }(function() {
-                    document.getElementById('my-ip').innerHTML = 'Loading...';
-                }, function(response) {
-                    document.getElementById('my-ip').innerHTML = response.ip;
-                }));
+
+ 
                 
 </script>
  

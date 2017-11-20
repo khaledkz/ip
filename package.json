@@ -20,7 +20,9 @@
   "dependencies": {
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
-    "os": "^0.1.1"
+    "nodemailer": "^4.4.0",
+    "os": "^0.1.1",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
